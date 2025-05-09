@@ -23,7 +23,7 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
-    res.send("Country Hub Backend is Running ✅");
+    res.send("Movie Explorer Backend is Running ✅");
 });
   
 // Routes
