@@ -2,12 +2,12 @@ import Favorite from "../models/Favorite.js";
 
 // Add favorite countries
 export const addFavorite = async (req, res) => {
-    const { countryCode, countryName } = req.body;
+    const { movieCode, movieName } = req.body;
     try {
         const favorite = new Favorite({
             userId: req.user.id,
-            countryCode,
-            countryName
+            movieCode,
+            movieName
         });
         await favorite.save();
         res.status(201).json(favorite);
@@ -19,7 +19,7 @@ export const addFavorite = async (req, res) => {
 // Delete favorite countries
 export const deleteFavorite = async (req, res) => {
     try {
-        await Favorite.deleteOne({ userId: req.user.id, countryCode: req.params.countryCode });
+        await Favorite.deleteOne({ userId: req.user.id, movieCode: req.params.movieCode });
         res.status(204).send();
     } catch (err) {
         res.status(500).json({ message: "Failed to delete favorite", error: err.message });
