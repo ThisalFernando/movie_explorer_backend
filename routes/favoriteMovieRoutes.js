@@ -1,5 +1,5 @@
 import express from "express";
-import { authenticateUser } from "../middleware/authMovieMiddleware.js";
+import { authenticateUser } from "../middleware/movieAuthMiddleware.js";
 import {addFavorite, deleteFavorite, getFavorites} from "../controllers/favoriteMovieController.js";
 
 const router = express.Router();
