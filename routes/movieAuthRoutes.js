@@ -1,6 +1,6 @@
 import express from "express";
-import { register, login, getUserDetails } from "../controllers/authMovieController.js";
-import { authenticateUser } from "../middleware/authMovieMiddleware.js";
+import { register, login, getUserDetails } from "../controllers/movieAuthController.js";
+import { authenticateUser } from "../middleware/movieAuthMiddleware.js";
 
 const router = express.Router();
 
