@@ -5,7 +5,7 @@ import {addFavorite, deleteFavorite, getFavorites} from "../controllers/favorite
 const router = express.Router();
 
 router.post("/", authenticateUser, addFavorite); // Router path to add favorite countries
-router.delete("/:movieCode", authenticateUser, deleteFavorite); // Router path to remove countries from favorites
+router.delete("/:movieId", authenticateUser, deleteFavorite); // Router path to remove countries from favorites
 router.get("/", authenticateUser, getFavorites); // Router path to fetch favorite countries
 
 export default router;
