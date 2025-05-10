@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import User from "../models/User.js";
+import User from "../models/UserMovie.js";
 import { generateToken } from "../utils/jwtUtils.js";
 
 // Service for register
