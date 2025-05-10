@@ -1,5 +1,5 @@
 import { registerUser, loginUser } from "../services/authMovieService.js";
-import User from "../models/UserMovie.js";
+import UserMovie from "../models/UserMovie.js";
 
 // Register a new user
 export const register = async (req, res) => {
