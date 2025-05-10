@@ -4,7 +4,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
-import authMovieRoutes from "./routes/authMovieRoutes.js";
+import movieAuthRoutes from "./routes/movieAuthRoutes.js";
 import favoriteMovieRoutes from "./routes/favoriteMovieRoutes.js";
 
 dotenv.config();
@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
   
 // Routes
-app.use("/api/auth-movie", authMovieRoutes);
+app.use("/api/movie-auth", movieAuthRoutes);
 app.use("/api/favorite-movies", favoriteMovieRoutes);
 
 
