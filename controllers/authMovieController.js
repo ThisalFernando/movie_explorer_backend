@@ -29,7 +29,7 @@ export const login = async (req, res) => {
 // Get logged customer's details
 export const getUserDetails = async (req, res) => {
     try {
-        const user = await User.findById(req.user.id); 
+        const user = await UserMovie.findById(req.user.id); 
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
