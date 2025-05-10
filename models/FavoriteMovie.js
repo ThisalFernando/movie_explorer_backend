@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const favoriteSchema = new mongoose.Schema({
+const favoriteMovieSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   movieId: { type: Number, required: true },
   title: String,
@@ -9,4 +9,4 @@ const favoriteSchema = new mongoose.Schema({
   vote_average: Number,
 }, { timestamps: true });
 
-export default mongoose.model("Favorite", favoriteSchema);
+export default mongoose.model("FavoriteMovie", favoriteMovieSchema);
