@@ -1,4 +1,4 @@
-import { registerUser, loginUser } from "../services/authMovieService.js";
+import { registerUser, loginUser } from "../services/movieAuthService.js";
 import UserMovie from "../models/UserMovie.js";
 
 // Register a new user
