@@ -1,5 +1,5 @@
-import { registerUser, loginUser } from "../services/authService.js";
-import User from "../models/User.js";
+import { registerUser, loginUser } from "../services/movieAuthService.js";
+import UserMovie from "../models/UserMovie.js";
 
 // Register a new user
 export const register = async (req, res) => {
@@ -29,7 +29,7 @@ export const login = async (req, res) => {
 // Get logged customer's details
 export const getUserDetails = async (req, res) => {
     try {
-        const user = await User.findById(req.user.id); 
+        const user = await UserMovie.findById(req.user.id); 
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
@@ -41,4 +41,4 @@ export const getUserDetails = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: "Error retrieving user details", error });
     }
-};
+}
