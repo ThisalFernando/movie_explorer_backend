@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
+const userMovieSchema = new mongoose.Schema({
     name: {type: String, required: true},
     address: {type: String, required: true},
     email: {type: String, reuired: true, unique: true},
@@ -8,4 +8,4 @@ const userSchema = new mongoose.Schema({
     role: {type: String, enum: ["user", "admin"], default: "user"}
 }, {timestamps: true});
 
-export default mongoose.model("User", userSchema);
+export default mongoose.model("UserMovie", userMovieSchema);
