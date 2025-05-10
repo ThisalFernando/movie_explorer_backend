@@ -1,5 +1,5 @@
-import { registerUser, loginUser } from "../services/authService.js";
-import User from "../models/User.js";
+import { registerUser, loginUser } from "../services/authMovieService.js";
+import User from "../models/UserMovie.js";
 
 // Register a new user
 export const register = async (req, res) => {
