@@ -15,7 +15,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors({
-    origin: "https://movie-explorer-omega-green.vercel.app/",
+    origin: "https://movie-explorer-omega-green.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
