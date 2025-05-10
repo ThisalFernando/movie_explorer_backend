@@ -5,7 +5,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
-import favoriteRoutes from "./routes/favoriteRoutes.js";
+import favoriteMovieRoutes from "./routes/favoriteMovieRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/favorites", favoriteRoutes);
+app.use("/api/favorite-movies", favoriteMovieRoutes);
 
 
 const PORT = process.env.PORT || 5000;
