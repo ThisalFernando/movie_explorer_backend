@@ -15,7 +15,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors({
-    origin: "https://countryhub-frontend.vercel.app",
+    origin: "https://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
